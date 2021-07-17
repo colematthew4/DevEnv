@@ -1,0 +1,94 @@
+#!/bin/zsh
+
+function loadPlugins() {
+  declare -A defaultPlugins
+  declare -A externalPlugins
+  declare maxPluginNameLen
+
+  loadDefaultPlugins
+  installExternalPlugin "https://github.com/mattjj/my-oh-my-zsh/tree/master/plugins/zsh-syntax-highlighting"
+  echo
+  promptExternalPlugins
+
+  ZSH_PLUGINS=$(format ${(kv)defaultPlugins} ${(kv)externalPlugins})
+}
+
+function loadDefaultPlugins() {
+  echo 'Installing default built-in plugins'
+
+  defPlugins=($(cat $HOME/Repos/DevEnv/config/.oh-my-zsh-plugins | sed -e 's/\n/ /g'))
+
+  for plugin in ${defPlugins[@]}; do
+    checkLongestPluginName $plugin
+    defaultPlugins[$plugin]="https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/$plugin"
+  done
+}
+
+function promptExternalPlugins() {
+  echo "Are there any additional plugins you wish to install?"
+  local prompt='Enter the git repo below and it will be installed automatically!
+If not, leave blank: '
+
+  while read pluginRepo\?$prompt$'\x1b[38;2;255;184;108m' && [ ! -z "$pluginRepo" ]; do
+    if [[ ! $pluginRepo =~ ((git|ssh|http(s)?)|(git@[\w\.]+))(:(//)?)([\w\.@\:/\-~]+)(\.git)(/)? ]]; then
+      echo -e "\033[0;31mPlease input the git url where the external plugin is located\033[0m"
+    elif [ ! -z "$pluginRepo" ]; then
+      return
+    else
+      installExternalPlugin $pluginRepo
+    fi
+  done
+  
+  echo $'\x1b[0m'
+}
+
+function installExternalPlugin() {
+  local pluginRepo=$1
+  local pluginName=$(basename -s .git $pluginRepo)
+  echo -e "\e[4mInstalling $pluginName external plugin\e[0m"
+
+  git clone $pluginRepo $HOME/.oh-my-zsh/custom/plugins
+  
+  checkLongestPluginName $pluginName
+  externalPlugins[$pluginName]="$pluginRepo"
+}
+
+# We want to put a comment for each plugin to see where they come from and look up docs easily
+function checkLongestPluginName() {
+  local plugin=$1
+  local pluginNameLength=${#plugin}
+
+  if (( $pluginNameLength > ${maxPluginNameLen:-0} )); then
+    maxPluginNameLen=$pluginNameLength
+  fi
+}
+
+function format() {
+  local sortedPluginMap=($(. $HOME/Repos/DevEnv/tools/sortmap && sortmap $*))
+  local plugins=()
+
+  for name repo in ${(kv)sortedPluginMap}; do
+    local indent=$(docsIndent $maxPluginNameLen-${#name}+3)
+    local plugin=""
+
+    if [ "$name" = "aws" -o "$name" = "kubectl" ]; then
+      read -sq enabled\?$'\n'"Do you expect to use $name (y/n)? "
+      if [ ! -z "$enabled" ] && [ "$enabled" = "N" -o "$enabled" = "n" ]; then
+        plugin="$plugin# "
+      fi
+    fi
+
+    plugins+="$plugin$name$indent# $repo&"
+  done
+
+  echo "  ${plugins[*]//&[[:space:]]/\n  }" | tr -d '&'
+  # printf -v ALL_PLUGINS "  ${%s[*]//& /\n  }" "$plugins[*]"
+}
+
+function docsIndent() {
+  local indent=""
+  for (( i=0; i<$1; ++i )); do
+    indent="$indent "
+  done
+  echo $indent
+}

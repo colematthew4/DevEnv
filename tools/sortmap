@@ -1,0 +1,14 @@
+#!/bin/zsh
+
+function sortmap() {
+  local -A map=($(printf '%s' "$*"))
+  local keys=("${(k)map}")
+  local sortedKeys=($(printf '%s\n' $(sed 's/ /\n/g' <<< ${keys[@]}) | sort))
+
+  local sortedMap=()
+  for key in ${(@)sortedKeys}; do
+    sortedMap+=("$key" "$map[$key]")
+  done
+
+  echo "${(kv)sortedMap}"
+}

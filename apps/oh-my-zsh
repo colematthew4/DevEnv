@@ -6,7 +6,28 @@ zsh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install
 # Set to default, since the --unattended flag causes the installation to skip that step
 chsh -s $(which zsh)
 
+. $HOME/Repos/DevEnv/tools/copyConfigsToHome
+
 # Add theme
 rm $HOME/.oh-my-zsh/custom/themes/example*
 cp $HOME/Repos/DevEnv/themes/dracula_prime.zsh-theme $HOME/.oh-my-zsh/custom/themes
 
+# Add aliases
+copyConfigsToHome .zsh_aliases
+
+# Write theme to zshrc
+# sed -i -Ee 's/(^ZSH_THEME=("?))[a-zA-Z0-9_ -]*("?$)/\1dracula_prime\2/g' $HOME/.zshrc
+perl -i -pe's/(^ZSH_THEME=("?))[a-zA-Z0-9_ -]*("?$)/$1tdracula_prime$2/g' $HOME/.zshrc
+
+# Write plugins to zshrc
+. ./tools/loadZshPlugins && loadPlugins
+echo
+
+# Escape the newlines in ZSH_PLUGINS so perl can insert it in-place
+escaped_plugins=$(sed 's:/:\\/:g' <<< $ZSH_PLUGINS)
+perl -i -p0777e"s/(^plugins=\()[\w\s\/#:.-]*(\)$)/\1\n$escaped_plugins\n\2/gm" $HOME/.zshrc
+# perl -i -p0777e's/(^plugins=\()[\w\s\/#:.-]*(\)$)/\1git\2/gm' $HOME/.zshrc
+
+# Ensure extended configurations are loaded
+copyConfigsToHome .zshrc.ext
+echo '. ~./zshrc.ext' >> $HOME/.zshrc

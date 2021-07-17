@@ -10,3 +10,7 @@ chsh -s $(which zsh)
 rm $HOME/.oh-my-zsh/custom/themes/example*
 cp $HOME/Repos/DevEnv/themes/dracula_prime.zsh-theme $HOME/.oh-my-zsh/custom/themes
 
+# Write theme to zshrc
+# sed -i -Ee 's/(^ZSH_THEME=("?))[a-zA-Z0-9_ -]*("?$)/\1dracula_prime\2/g' $HOME/.zshrc
+perl -i -pe's/(^ZSH_THEME=("?))[a-zA-Z0-9_ -]*("?$)/$1tdracula_prime$2/g' $HOME/.zshrc
+

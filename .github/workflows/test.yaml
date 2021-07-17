@@ -1,0 +1,10 @@
+name: Test Installation
+on: [push]
+jobs:
+  oh-my-zsh-installation:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          path: 'Repos'
+      - run: pwd; ls -lah

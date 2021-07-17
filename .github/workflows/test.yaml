@@ -7,4 +7,6 @@ jobs:
       - uses: actions/checkout@v2
         with:
           path: 'Repos'
-      - run: pwd; ls -lah
+      - run: pwd; ls -lah; ls -lah ..; ls -lah ../..; ls -lah Repos
+      - run: echo $HOME
+      - run: which zsh

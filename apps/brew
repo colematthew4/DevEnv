@@ -1,0 +1,22 @@
+#!bin/zsh
+
+/bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+brew install \
+  gradle \
+  jenv \
+  jq \
+  nvm \
+  turbogit              # optional
+
+brew install --cask \
+  adoptopenjdk \
+  # gitkraken optional because of license
+  gitkraken \
+  jetbrains-toolbox \
+  rectangle \
+  vivaldi \
+  docker \
+  iterm2 \
+  open-in-code \
+  visual-studio-code \

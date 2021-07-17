@@ -6,7 +6,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          path: 'Repos'
-      - run: pwd; ls -lah; ls -lah ..; ls -lah ../..; ls -lah Repos
+          path: $HOME/Repos/DevEnv
       - run: echo $HOME
-      - run: which zsh
+      - run: ls -lah $HOME; ls -lah $HOME/Repos; ls -lah "$HOME/Repos/"

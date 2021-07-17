@@ -1,0 +1,12 @@
+#!/bin/zsh
+
+# Install
+zsh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+
+# Set to default, since the --unattended flag causes the installation to skip that step
+chsh -s $(which zsh)
+
+# Add theme
+rm $HOME/.oh-my-zsh/custom/themes/example*
+cp $HOME/Repos/DevEnv/themes/dracula_prime.zsh-theme $HOME/.oh-my-zsh/custom/themes
+

@@ -9,6 +9,12 @@ brew install \
   nvm \
   turbogit              # optional
 
+# load turbogit autocompletion into extended .zshrc (if it was installed and not already added)
+which tug 1>/dev/null 2>&1 && 
+  [ -z "$(egrep -o "^[^# ]*tug completion bash > \/usr\/local\/etc\/bash_completion.d\/tug$" config/.zshrc.ext)" ] && 
+  # [ -z "$(awk -v var='tug completion bash > /usr/local/etc/bash_completion.d/tug' 'BEGIN{ regex = "^[^# ]*"var"$" }; $0 ~ regex' config/.zshrc.ext)" ] && 
+  printf '%s\n' 'tug completion bash > /usr/local/etc/bash_completion.d/tug' >> config/.zshrc.ext
+
 brew install --cask \
   adoptopenjdk \
   # gitkraken optional because of license

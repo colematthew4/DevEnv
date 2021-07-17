@@ -6,6 +6,8 @@ zsh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install
 # Set to default, since the --unattended flag causes the installation to skip that step
 chsh -s $(which zsh)
 
+. $HOME/Repos/DevEnv/tools/copyConfigsToHome
+
 # Add theme
 rm $HOME/.oh-my-zsh/custom/themes/example*
 cp $HOME/Repos/DevEnv/themes/dracula_prime.zsh-theme $HOME/.oh-my-zsh/custom/themes
@@ -27,4 +29,5 @@ perl -i -p0777e"s/(^plugins=\()[\w\s\/#:.-]*(\)$)/\1\n$escaped_plugins\n\2/gm" $
 # perl -i -p0777e's/(^plugins=\()[\w\s\/#:.-]*(\)$)/\1git\2/gm' $HOME/.zshrc
 
 # Ensure extended configurations are loaded
+copyConfigsToHome .zshrc.ext
 echo '. ~./zshrc.ext' >> $HOME/.zshrc

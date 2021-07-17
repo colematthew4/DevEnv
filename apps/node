@@ -1,0 +1,10 @@
+#!/bin/zsh
+
+nvm install 12
+nvm install-latest-npm
+echo "
+export NVM_AUTOLOAD=1
+export NVM_LAZY=1
+" >> $HOME/Repos/DevEnv/config/.zshrc.ext
+
+echo "default" > $HOME/.nvmrc

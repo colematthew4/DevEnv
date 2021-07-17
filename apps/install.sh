@@ -4,3 +4,5 @@
 # Install brew and apps
 . brew
 
+# Use version managers from brew to install actual platform binaries
+. node

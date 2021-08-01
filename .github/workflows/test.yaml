@@ -5,6 +5,5 @@ jobs:
     runs-on: macos-10.15
     steps:
       - uses: actions/checkout@v2
-      - run: echo $HOME; echo $PWD; echo $REPOS_DIR; ls -lah $HOME; ls -lah $PWD; ls -lah $REPOS_DIR
-        env:
-          REPOS_DIR: $PWD/Repos
+      - run: REPOS_DIR=$PWD echo $SHELL && which zsh
+      - run: zsh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended; echo "$ZSH, $SHELL, $REPOS_DIR"

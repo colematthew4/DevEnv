@@ -47,7 +47,7 @@ function installExternalPlugin() {
   local pluginName=$(basename -s .git $pluginRepo)
   echo -e "\e[4mInstalling $pluginName external plugin\e[0m"
 
-  git clone $pluginRepo $ZSH/custom/plugins
+  git clone $pluginRepo $HOME/.oh-my-zsh/custom/plugins
   
   checkLongestPluginName $pluginName
   externalPlugins[$pluginName]="$pluginRepo"

@@ -16,7 +16,7 @@ function loadPlugins() {
 function loadDefaultPlugins() {
   echo 'Installing default built-in plugins'
 
-  defPlugins=($(cat $HOME/Repos/DevEnv/config/.oh-my-zsh-plugins | sed -e 's/\n/ /g'))
+  defPlugins=($(cat $REPOS_DIR/config/.oh-my-zsh-plugins | sed -e 's/\n/ /g'))
 
   for plugin in ${defPlugins[@]}; do
     checkLongestPluginName $plugin
@@ -47,7 +47,7 @@ function installExternalPlugin() {
   local pluginName=$(basename -s .git $pluginRepo)
   echo -e "\e[4mInstalling $pluginName external plugin\e[0m"
 
-  git clone $pluginRepo $HOME/.oh-my-zsh/custom/plugins
+  git clone $pluginRepo $ZSH/custom/plugins
   
   checkLongestPluginName $pluginName
   externalPlugins[$pluginName]="$pluginRepo"
@@ -64,7 +64,7 @@ function checkLongestPluginName() {
 }
 
 function format() {
-  local sortedPluginMap=($(. $HOME/Repos/DevEnv/tools/sortmap && sortmap $*))
+  local sortedPluginMap=($(. $REPOS_DIR/tools/sortmap && sortmap $*))
   local plugins=()
 
   for name repo in ${(kv)sortedPluginMap}; do

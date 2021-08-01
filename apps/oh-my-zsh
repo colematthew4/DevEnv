@@ -4,13 +4,13 @@
 zsh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 # Set to default, since the --unattended flag causes the installation to skip that step
-chsh -s $(which zsh)
+# # chsh -s $(which zsh)
 
-. $HOME/Repos/DevEnv/tools/copyConfigsToHome
+. $REPOS_DIR/tools/copyConfigsToHome
 
 # Add theme
-rm $HOME/.oh-my-zsh/custom/themes/example*
-cp $HOME/Repos/DevEnv/themes/dracula_prime.zsh-theme $HOME/.oh-my-zsh/custom/themes
+rm $ZSH/custom/themes/example*
+cp $REPOS_DIR/themes/dracula_prime.zsh-theme $ZSH/custom/themes
 
 # Add aliases
 copyConfigsToHome .zsh_aliases

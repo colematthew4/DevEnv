@@ -6,4 +6,5 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: zsh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-      - run: zsh -c 'echo $HOME; ls -lah $HOME; ls -lah $ZSH; echo $SHELL'
+      - run: zsh -c 'echo $ZSH'
+      - run: zsh -c './apps/install.zsh'

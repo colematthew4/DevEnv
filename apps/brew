@@ -7,7 +7,8 @@ brew install \
   jenv \
   jq \
   nvm \
-  turbogit              # optional
+  # turbogit optional, recommended if gitkraken can't be used
+  turbogit
 
 # load turbogit autocompletion into extended .zshrc (if it was installed and not already added)
 which tug 1>/dev/null 2>&1 && 

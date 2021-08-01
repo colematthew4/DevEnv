@@ -2,10 +2,9 @@ name: Test Installation
 on: [push]
 jobs:
   oh-my-zsh-installation:
-    runs-on: macos-latest
+    runs-on: macos-11.0
     steps:
       - uses: actions/checkout@v2
-        with:
-          path: $HOME/Repos/DevEnv
-      - run: echo $HOME; pwd
-      - run: ls -lah $HOME; ls -lah $HOME/Repos; ls -lah "$HOME/Repos/"
+      - run: echo $HOME; echo $PWD; echo $REPOS_DIR; ls -lah $HOME; ls -lah $PWD; ls -lah $REPOS_DIR
+        env:
+          REPOS_DIR: $PWD/Repos

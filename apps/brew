@@ -1,7 +1,7 @@
 #!bin/zsh
 
 echo "Installing Homebrew"
-/bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # turbogit optional, recommended if gitkraken can't be used
 brew install \

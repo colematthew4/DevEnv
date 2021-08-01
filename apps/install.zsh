@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 # First order of business: configure repo directory if not already set
 if [ -z "$REPOS_DIR" ]; then
   export REPOS_DIR=$HOME/Repos/DevEnv

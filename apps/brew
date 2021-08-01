@@ -17,14 +17,17 @@ which tug 1>/dev/null 2>&1 &&
   # [ -z "$(awk -v var='tug completion bash > /usr/local/etc/bash_completion.d/tug' 'BEGIN{ regex = "^[^# ]*"var"$" }; $0 ~ regex' config/.zshrc.ext)" ] && 
   printf '%s\n' 'tug completion bash > /usr/local/etc/bash_completion.d/tug' >> config/.zshrc.ext
 
-# gitkraken optional because of license
-brew install --cask \
-  adoptopenjdk \
-  gitkraken \
-  jetbrains-toolbox \
-  rectangle \
-  vivaldi \
-  docker \
-  iterm2 \
-  open-in-code \
-  visual-studio-code \
+# don't install casks on github runner
+if [ -z "$CI" ]; then
+  # gitkraken optional because of license
+  brew install --cask \
+    adoptopenjdk \
+    gitkraken \
+    jetbrains-toolbox \
+    rectangle \
+    vivaldi \
+    docker \
+    iterm2 \
+    open-in-code \
+    visual-studio-code \
+fi

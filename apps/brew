@@ -3,13 +3,13 @@
 echo "Installing Homebrew"
 /bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+# turbogit optional, recommended if gitkraken can't be used
 brew install \
   gradle \
   jenv \
   jq \
   nvm \
   turbogit
-  # turbogit optional, recommended if gitkraken can't be used
 
 # load turbogit autocompletion into extended .zshrc (if it was installed and not already added)
 which tug 1>/dev/null 2>&1 && 
@@ -17,9 +17,9 @@ which tug 1>/dev/null 2>&1 &&
   # [ -z "$(awk -v var='tug completion bash > /usr/local/etc/bash_completion.d/tug' 'BEGIN{ regex = "^[^# ]*"var"$" }; $0 ~ regex' config/.zshrc.ext)" ] && 
   printf '%s\n' 'tug completion bash > /usr/local/etc/bash_completion.d/tug' >> config/.zshrc.ext
 
+# gitkraken optional because of license
 brew install --cask \
   adoptopenjdk \
-  # gitkraken optional because of license
   gitkraken \
   jetbrains-toolbox \
   rectangle \

@@ -1,10 +1,10 @@
 name: Test Installation
 on: [push]
 jobs:
-  oh-my-zsh-installation:
+  install-apps:
     runs-on: macos-10.15
     steps:
       - uses: actions/checkout@v2
-      # - run: zsh -c 'zsh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended; zsh'
-      - run: REPOS_DIR=$PWD zsh -c './apps/install.zsh'
+      - run: zsh -c "REPOS_DIR=$PWD ./apps/install.zsh"
       - run: cat $HOME/.zshrc
+      - run: ls -lah $HOME

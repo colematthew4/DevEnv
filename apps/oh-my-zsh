@@ -9,6 +9,9 @@ if [ -z "$CI" ]; then
   chsh -s $(which zsh)
 fi
 
+# Load the new default .zshrc so that some comands can be properly run
+zsh
+
 . $REPOS_DIR/tools/copyConfigsToHome
 
 # Add theme

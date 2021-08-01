@@ -76,6 +76,7 @@ function format() {
       if [ ! -z "$enabled" ] && [ "$enabled" = "N" -o "$enabled" = "n" ]; then
         plugin="$plugin# "
       fi
+      echo
     fi
 
     plugins+="$plugin$name$indent# $repo&"

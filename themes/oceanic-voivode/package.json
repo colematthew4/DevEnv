@@ -1,0 +1,28 @@
+{
+    "name": "oceanic-voivode",
+    "displayName": "Oceanic Voivode",
+    "description": "An evolution of the Material Oceanic theme for IntelliJ on the workbench and the Dracula theme in the editor.",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.58.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "Oceanic Voivode",
+                "uiTheme": "vs-dark",
+                "path": "./themes/oceanic-voivode-color-theme.json"
+            }
+        ]
+    },
+    "extensionDependencies": [
+        "pkief.material-icon-theme",
+        "jenkey2011.string-highlight"
+    ],
+    "dependencies": {
+        "vsce": "^1.96.1"
+    }
+}

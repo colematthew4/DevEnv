@@ -1,5 +1,6 @@
 #!bin/zsh
 
+echo "Installing Homebrew"
 /bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 brew install \
@@ -7,8 +8,8 @@ brew install \
   jenv \
   jq \
   nvm \
-  # turbogit optional, recommended if gitkraken can't be used
   turbogit
+  # turbogit optional, recommended if gitkraken can't be used
 
 # load turbogit autocompletion into extended .zshrc (if it was installed and not already added)
 which tug 1>/dev/null 2>&1 && 

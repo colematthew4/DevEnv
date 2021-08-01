@@ -4,13 +4,19 @@
 zsh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 # Set to default, since the --unattended flag causes the installation to skip that step
-# # chsh -s $(which zsh)
+# skip this step if on GitHub runner, since chsh is not possible there (requires password input)
+if [ -z "$CI" ]; then
+  chsh -s $(which zsh)
+fi
 
 . $REPOS_DIR/tools/copyConfigsToHome
 
 # Add theme
 rm $HOME/.oh-my-zsh/custom/themes/example*
 cp $REPOS_DIR/themes/dracula_prime.zsh-theme $HOME/.oh-my-zsh/custom/themes
+
+# Disable auto-update prompt to just always update
+perl -i -pe's/^# (DISABLE_UPDATE_PROMPT=")[a-zA-Z]*("?$)/$1true$2/g' $HOME/.zshrc
 
 # Add aliases
 copyConfigsToHome .zsh_aliases

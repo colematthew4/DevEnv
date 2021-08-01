@@ -4,13 +4,13 @@ if [ -z "$REPOS_DIR" ]; then
 fi
 
 # Install and configure oh-my-zsh
-. oh-my-zsh
+. $REPOS_DIR/apps/oh-my-zsh
 
 # Install brew and apps
-. brew
+. $REPOS_DIR/apps/brew
 
 # Use version managers from brew to install actual platform binaries
-. node
+. $REPOS_DIR/apps/node
 
 # Invoke scripts to set system preferences and other actions that can't be done by zsh
-# osascript scripts/system.scpt
+# osascript $REPOS_DIR/scripts/system.scpt

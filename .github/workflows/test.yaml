@@ -6,5 +6,5 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: zsh -c 'zsh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended; zsh'
-      - run: REPOS_DIR=$PWD zsh -c '. $REPOS_DIR/tools/copyConfigsToHome; rm $HOME/.oh-my-zsh/custom/themes/example*; cp $REPOS_DIR/themes/dracula_prime.zsh-theme $HOME/.oh-my-zsh/custom/themes; perl -i -pe"s/(^ZSH_THEME=(\"?))[a-zA-Z0-9_ -]*(\"?$)/$1tdracula_prime$2/g" $HOME/.zshrc'
+      - run: REPOS_DIR=$PWD ./apps/install.zsh
       - run: cat $HOME/.zshrc

@@ -17,10 +17,10 @@ copyConfigsToHome .zsh_aliases
 
 # Write theme to zshrc
 # sed -i -Ee 's/(^ZSH_THEME=("?))[a-zA-Z0-9_ -]*("?$)/\1dracula_prime\2/g' $HOME/.zshrc
-perl -i -pe's/(^ZSH_THEME=("?))[a-zA-Z0-9_ -]*("?$)/$1tdracula_prime$2/g' $HOME/.zshrc
+perl -i -pe's/(^ZSH_THEME=("?))[a-zA-Z0-9_ -]*("?$)/$1dracula_prime$2/g' $HOME/.zshrc
 
 # Write plugins to zshrc
-. ./tools/loadZshPlugins && loadPlugins
+. $REPOS_DIR/tools/loadZshPlugins && loadPlugins
 echo
 
 # Escape the newlines in ZSH_PLUGINS so perl can insert it in-place

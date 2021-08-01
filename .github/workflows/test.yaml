@@ -2,7 +2,7 @@ name: Test Installation
 on: [push]
 jobs:
   oh-my-zsh-installation:
-    runs-on: macos-11.0
+    runs-on: macos-11
     steps:
       - uses: actions/checkout@v2
       - run: echo $HOME; echo $PWD; echo $REPOS_DIR; ls -lah $HOME; ls -lah $PWD; ls -lah $REPOS_DIR

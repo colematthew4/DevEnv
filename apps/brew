@@ -1,13 +1,15 @@
 #!bin/zsh
 
-/bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+echo "Installing Homebrew"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+# turbogit optional, recommended if gitkraken can't be used
 brew install \
   gradle \
   jenv \
   jq \
   nvm \
-  turbogit              # optional
+  turbogit
 
 # load turbogit autocompletion into extended .zshrc (if it was installed and not already added)
 which tug 1>/dev/null 2>&1 && 
@@ -15,14 +17,17 @@ which tug 1>/dev/null 2>&1 &&
   # [ -z "$(awk -v var='tug completion bash > /usr/local/etc/bash_completion.d/tug' 'BEGIN{ regex = "^[^# ]*"var"$" }; $0 ~ regex' config/.zshrc.ext)" ] && 
   printf '%s\n' 'tug completion bash > /usr/local/etc/bash_completion.d/tug' >> config/.zshrc.ext
 
-brew install --cask \
-  adoptopenjdk \
+# don't install casks on github runner
+if [ -z "$CI" ]; then
   # gitkraken optional because of license
-  gitkraken \
-  jetbrains-toolbox \
-  rectangle \
-  vivaldi \
-  docker \
-  iterm2 \
-  open-in-code \
-  visual-studio-code \
+  brew install --cask \
+    adoptopenjdk \
+    gitkraken \
+    jetbrains-toolbox \
+    rectangle \
+    vivaldi \
+    docker \
+    iterm2 \
+    open-in-code \
+    visual-studio-code \
+fi

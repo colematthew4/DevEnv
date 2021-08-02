@@ -1,5 +1,5 @@
 #!/bin/zsh
 
 function copyConfigsToHome() {
-  cp $HOME/Repos/DevEnv/config/$1 $HOME
+  cp $REPOS_DIR/config/$1 $HOME
 }

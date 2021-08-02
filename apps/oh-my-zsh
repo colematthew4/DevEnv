@@ -9,9 +9,6 @@ if [ -z "$CI" ]; then
   chsh -s $(which zsh)
 fi
 
-# Load the new default .zshrc so that some comands can be properly run
-zsh
-
 . $REPOS_DIR/tools/copyConfigsToHome
 
 # Add theme
@@ -40,3 +37,6 @@ perl -i -p0777e"s/(^plugins=\()[\w\s\/#:.-]*(\)$)/\1\n$escaped_plugins\n\2/gm" $
 # Ensure extended configurations are loaded
 copyConfigsToHome .zshrc.ext
 echo '. ~./zshrc.ext' >> $HOME/.zshrc
+
+# Reload the new .zshrc so that some comands can be properly run and more executables are added to path
+zsh

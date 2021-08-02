@@ -6,4 +6,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: REPOS_DIR=$PWD ./apps/install.zsh
-      - run: cat $HOME/.zshrc; cat $HOME/.zshrc.ext;
+      - run: cat $HOME/.zshrc

@@ -1,0 +1,14 @@
+#!/bin/zsh
+
+###############################################################################
+#                              Mission Control
+###############################################################################
+
+# Automatically rearrange Spaces based on most recent use (https://macos-defaults.com/mission-control/mru-spaces.html)
+defaults write com.apple.dock mru-spaces -bool false
+
+# Group windows by application
+# defaults write com.apple.dock expose-group-apps -bool false
+
+# Displays have separate Spaces
+# defaults write com.apple.spaces spans-displays -bool true

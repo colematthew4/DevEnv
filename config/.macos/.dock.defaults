@@ -58,8 +58,8 @@ defaults write com.apple.controlcenter NsStatusItem\ Visible\ DoNotDisturb -bool
 # Show Keyboard Brightness in Menu Bar
 # defaults write com.apple.controlcenter NsStatusItem\ Visible\ KeyboardBrightness -bool true
 
-# Show Now Playing in Menu Bar
-defaults write com.apple.controlcenter NsStatusItem\ Visible\ NowPlaying -bool false
+# Show Now Playing in Menu Bar (toggles automatically)
+# defaults write com.apple.controlcenter NsStatusItem\ Visible\ NowPlaying -bool false
 
 # Show Accessibility Shortcuts in Menu Bar
 defaults write com.apple.controlcenter NsStatusItem\ Visible\ AccessibilityShortcuts -bool true

@@ -1,0 +1,38 @@
+#!/bin/zsh
+
+###############################################################################
+#                                    General
+###############################################################################
+
+# Set System Theme
+defaults write -g AppleInterfaceStyle Dark
+
+# Set System Accent Color (don't touch, defaults to multicolor)
+# defaults write -g AppleAccentColor
+
+# Set System Highlight Color (don't touch, defaults to accent color)
+# defaults write -g AppleHighlightColor
+
+# Sidebar icon size
+# defaults write -g NSTableViewDefaultSizeMode -int 2
+
+# Allow wallpaper tinting in windows
+# defaults write -g AppleReduceDesktopTinting
+
+# Show scroll bars (Automatic, WhenScrolling, Always)
+# defaults write -g AppleShowScrollBars Automatic
+
+# Click in the scroll bar to jump to (NextPage: 0, Spot Clicked: 1)
+# defaults write -g AppleScrollerPagingBehavior -bool false
+
+# Default Web Browser - AppleScript
+# 
+
+# Prefer tabs when opening documents (manual, fullscreen, always)
+# defaults write -g AppleWindowTabbingMode always
+
+# Ask to keep changes when closing documents
+# defaults write -g NSCloseAlwaysConfirmsChanges -bool false
+
+# Close windows when quitting an app
+# defaults write -g NSQuitAlwaysKeepsWindows -bool false

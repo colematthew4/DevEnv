@@ -1,0 +1,8 @@
+#!/bin/zsh
+
+###############################################################################
+#                                  Accessibility
+###############################################################################
+
+# Use keyboard shortcuts to zoom
+# defaults write com.apple.universalaccess closeViewHotkeysEnabled -bool true

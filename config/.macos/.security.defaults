@@ -1,0 +1,17 @@
+#!/usr/bin/osascript
+
+tell application "System Preferences"
+  activate
+  set current pane to pane id "com.apple.preference.security"
+  delay 0.5
+  tell application "System Events"
+    tell tab group 1 of window "Security & Privacy" of application process "System Preferences"
+      click radio button "General"
+      tell pop up button 1
+        click
+        delay 0.2
+        click menu item "immediately" of menu 1
+      end tell
+    end tell
+  end tell
+end tell

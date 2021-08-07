@@ -1,9 +1,5 @@
 #!/bin/zsh
 
-###############################################################################
-#                                    General
-###############################################################################
-
 # Set System Theme
 defaults write -g AppleInterfaceStyle Dark
 
@@ -25,14 +21,14 @@ defaults write -g AppleInterfaceStyle Dark
 # Click in the scroll bar to jump to (NextPage: 0, Spot Clicked: 1)
 # defaults write -g AppleScrollerPagingBehavior -bool false
 
-# Default Web Browser - AppleScript
-# 
+# Default Web Browser
+open -a Vivaldi.app --args --make-default-browser
 
 # Prefer tabs when opening documents (manual, fullscreen, always)
-# defaults write -g AppleWindowTabbingMode always
+defaults write -g AppleWindowTabbingMode always
 
 # Ask to keep changes when closing documents
 # defaults write -g NSCloseAlwaysConfirmsChanges -bool false
 
 # Close windows when quitting an app
-# defaults write -g NSQuitAlwaysKeepsWindows -bool false
+defaults write -g NSQuitAlwaysKeepsWindows -bool false

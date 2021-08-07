@@ -1,7 +1,25 @@
-#!/bin/zsh
+#!/usr/bin/osascript
 
-###############################################################################
-#                              Notifications
-###############################################################################
-
-# AppleScript ?
+tell application "System Preferences"
+  activate
+  set current pane to pane id "com.apple.preference.notifications"
+  delay 1
+  tell application "System Events"
+    tell window "Notifications" of application process "System Preferences"
+      tell table 1 of scroll area 1
+        select (row 1 where name of UI element 1 is "Do Not Disturb")
+      end tell
+      tell checkbox "When the display is sleeping" of group 1
+        if (get its value) = 0 then click it
+      end tell
+      tell checkbox "When the screen is locked" of group 1
+        if (get its value) = 0 then click it
+      end tell
+      
+      tell table 1 of scroll area 1
+        select (row 1 where name of UI element 1 is "FaceTime")
+      end tell
+      click radio button "Alerts" of radio group 1 of group 1
+    end tell
+  end tell
+end tell

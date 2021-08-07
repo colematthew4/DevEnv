@@ -1,0 +1,31 @@
+#!/usr/bin/osascript
+
+tell application "System Preferences"
+  activate
+  set current pane to pane id "com.apple.preference.desktopscreeneffect"
+  delay 1
+  tell application "System Events"
+    tell tab group 1 of window "Desktop & Screen Saver" of application process "System Preferences"
+      click radio button "Desktop"
+      delay 1
+      tell pop up button 2
+        click
+        delay 0.2
+        click menu item "Dynamic" of menu 1
+      end tell
+
+      click radio button "Screen Saver"
+      delay 1
+      tell checkbox "Show screen saver after"
+        if (get its value) = 1 then click it
+      end tell
+    end tell
+    -- repeat every window of application process "System Preferences" whose name is not "Desktop & Screen Saver"
+    --   tell pop up button 1
+    --     click
+    --     delay 0.2
+    --     click menu item "Dynamic" of menu 1
+    --   end tell
+    -- end repeat
+  end tell
+end tell

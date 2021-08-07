@@ -1,7 +1,8 @@
-#!/bin/zsh
+#!/usr/bin/osascript
 
-###############################################################################
-#                      Users and Groups - Login Items
-###############################################################################
-
-# AppleScript
+tell application "System Events"
+    make login item at end with properties { path: "/Applications/Discord Canary.app", hidden: true }
+    make login item at end with properties { path: "/Applications/Lightshot Screenshot.app", hidden: true }
+    make login item at end with properties { path: "/Applications/Rectangle.app", hidden: true }
+    make login item at end with properties { path: "/Applications/Mail.app", hidden: true }
+end tell

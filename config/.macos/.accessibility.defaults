@@ -1,8 +1,27 @@
 #!/bin/zsh
 
-###############################################################################
-#                                  Accessibility
-###############################################################################
-
 # Use keyboard shortcuts to zoom
-# defaults write com.apple.universalaccess closeViewHotkeysEnabled -bool true
+defaults write com.apple.universalaccess closeViewHotkeysEnabled -bool true
+
+# Prefer closed captions and SDH
+# defaults write com.apple.mediaaccessibility MACaptionPreferAccessibleCaptions -bool false
+# defaults write com.apple.mediaaccessibility.public MACaptionDisplayType -int 3
+# defaults write com.apple.mediaaccessibility.public MADidMigrate -bool true
+osascript -e '''
+tell application "System Preferences"
+  activate
+  set current pane to pane id "com.apple.preference.universalaccess"
+  delay 0.5
+  tell application "System Events"
+    tell window "Accessibility" of application process "System Preferences"
+      tell table 1 of scroll area 1
+        select (row 1 where name of UI element 1 is "Captions")
+      end tell
+
+      tell checkbox "Prefer closed captions and SDH" of group 1
+        if (get its value) = 0 then click it
+      end tell
+    end tell
+  end tell
+end tell
+'''

@@ -10,13 +10,13 @@ defaults write com.apple.dock magnification -bool true
 defaults write com.apple.dock largesize -float 91
 
 # position on screen
-defaults write com.apple.dock orientation bottom
+# defaults write com.apple.dock orientation bottom
 
 # minimze windows using scale effect
 defaults write com.apple.dock mineffect scale
 
 # double-click a window's title bar to zoom
-defaults write -g AppleActionOnDoubleClick Maximize
+# defaults write -g AppleActionOnDoubleClick Maximize
 
 # minimize windows into application icon
 defaults write com.apple.dock minimize-to-application -bool true
@@ -44,7 +44,7 @@ defaults write com.apple.dock show-recents -bool false
 ###############################################################################
 
 # Show Wifi in Menu Bar
-defaults write com.apple.controlcenter NsStatusItem\ Visible\ Wifi -bool true
+# defaults write com.apple.controlcenter NsStatusItem\ Visible\ Wifi -bool true
 
 # Show Bluetooth in Menu Bar
 defaults write com.apple.controlcenter NsStatusItem\ Visible\ Bluetooth -bool true
@@ -53,7 +53,7 @@ defaults write com.apple.controlcenter NsStatusItem\ Visible\ Bluetooth -bool tr
 # defaults write com.apple.controlcenter NsStatusItem\ Visible\ Wifi -bool false
 
 # Show Do Not Disturb in Menu Bar
-defaults write com.apple.controlcenter NsStatusItem\ Visible\ DoNotDisturb -bool false
+# defaults write com.apple.controlcenter NsStatusItem\ Visible\ DoNotDisturb -bool false
 
 # Show Keyboard Brightness in Menu Bar
 # defaults write com.apple.controlcenter NsStatusItem\ Visible\ KeyboardBrightness -bool true
@@ -63,9 +63,11 @@ defaults write com.apple.controlcenter NsStatusItem\ Visible\ DoNotDisturb -bool
 
 # Show Accessibility Shortcuts in Menu Bar
 defaults write com.apple.controlcenter NsStatusItem\ Visible\ AccessibilityShortcuts -bool true
+# check "control center"
 
 # Show Battery in Menu Bar
-defaults write com.apple.controlcenter NsStatusItem\ Visible\ Battery -bool true
+# defaults write com.apple.controlcenter NsStatusItem\ Visible\ Battery -bool true
+# check "show percentage"
 
 # Show ? in Menu Bar
 # defaults write com.apple.controlcenter NsStatusItem\ Visible\ BentoBox -bool true
@@ -75,14 +77,15 @@ defaults write com.apple.controlcenter NsStatusItem\ Visible\ UserSwitcher -bool
 
 # Show Clock in Menu Bar
 defaults write com.apple.controlcenter NsStatusItem\ Visible\ Clock -bool true
+# display time with seconds
 
 # Show Spotlight in Menu Bar
-# defaults write com.apple.Spotlight NsStatusItem\ Visible\ Item-0 -bool true
+defaults write com.apple.Spotlight NsStatusItem\ Visible\ Item-0 -bool false
 
 # Show Siri in Menu Bar
-# defaults write com.apple.Siri StatusMenuVisible -bool true
+defaults write com.apple.Siri StatusMenuVisible -bool false
 
 # Show Time Machine in Menu Bar
-# defaults write com.apple.systemuiserver NsStatusItem\ Visible\ Item-0 -bool true
+# defaults write com.apple.systemuiserver NsStatusItem\ Visible\ Item-0 -bool false
 # defaults write com.apple.systemuiserver NsStatusItem\ Visible\ com.apple.menuextra.TimeMachine -bool true
 # defaults write com.apple.systemuiserver menuExtras -array-add "/System/Library/CoreServices/Menu Extras/TimeMachine.menu"

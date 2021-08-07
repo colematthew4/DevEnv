@@ -1,0 +1,11 @@
+#!/bin/zsh
+
+###############################################################################
+#                              Siri
+###############################################################################
+
+# enabled
+defaults write com.apple.assisstant.support "Assistant Enabled" -bool false
+
+# siri shows in top right menu bar
+defaults write com.apple.Siri StatusMenuVisible -bool false

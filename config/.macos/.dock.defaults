@@ -1,0 +1,91 @@
+#!/bin/zsh
+
+# Dock size (https://macos-defaults.com/dock/tilesize.html)
+# defaults write com.apple.dock tilesize -float 48
+
+# Enable magnification of dock
+defaults write com.apple.dock magnification -bool true
+
+# Dock magnification value
+defaults write com.apple.dock largesize -float 91
+
+# position on screen
+# defaults write com.apple.dock orientation bottom
+
+# minimze windows using scale effect
+defaults write com.apple.dock mineffect scale
+
+# double-click a window's title bar to zoom
+# defaults write -g AppleActionOnDoubleClick Maximize
+
+# minimize windows into application icon
+defaults write com.apple.dock minimize-to-application -bool true
+
+# animate opening applications
+# defaults write com.apple.dock launchanim -bool true
+
+# automatically hide and show the dock
+defaults write com.apple.dock autohide -bool true
+
+# (hidden) autohide animation time
+# defaults write com.apple.dock "autohide-time-modifier" -float 0.5
+
+# (hidden) autohide delay
+# defaults write com.apple.dock "autohide-delay" -float 0.5
+
+# show indicators for open applications (https://techblog.willshouse.com/2012/03/25/mac-os-x-dock-preference-settings-secrets/)
+# defaults write com.apple.dock no-bouncing -boolean-neg ?
+
+# show recent applications in dock
+defaults write com.apple.dock show-recents -bool false
+
+###############################################################################
+#                              Control Center
+###############################################################################
+
+# Show Wifi in Menu Bar
+# defaults write com.apple.controlcenter NsStatusItem\ Visible\ Wifi -bool true
+
+# Show Bluetooth in Menu Bar
+defaults write com.apple.controlcenter NsStatusItem\ Visible\ Bluetooth -bool true
+
+# Show AirDrop in Menu Bar
+# defaults write com.apple.controlcenter NsStatusItem\ Visible\ Wifi -bool false
+
+# Show Do Not Disturb in Menu Bar
+# defaults write com.apple.controlcenter NsStatusItem\ Visible\ DoNotDisturb -bool false
+
+# Show Keyboard Brightness in Menu Bar
+# defaults write com.apple.controlcenter NsStatusItem\ Visible\ KeyboardBrightness -bool true
+
+# Show Now Playing in Menu Bar (toggles automatically)
+# defaults write com.apple.controlcenter NsStatusItem\ Visible\ NowPlaying -bool false
+
+# Show Accessibility Shortcuts in Menu Bar
+defaults write com.apple.controlcenter NsStatusItem\ Visible\ AccessibilityShortcuts -bool true
+# check "control center"
+
+# Show Battery in Menu Bar
+# defaults write com.apple.controlcenter NsStatusItem\ Visible\ Battery -bool true
+# check "show percentage"
+
+# Show ? in Menu Bar
+# defaults write com.apple.controlcenter NsStatusItem\ Visible\ BentoBox -bool true
+
+# Show Fast User Switching in Menu Bar
+defaults write com.apple.controlcenter NsStatusItem\ Visible\ UserSwitcher -bool true
+
+# Show Clock in Menu Bar
+defaults write com.apple.controlcenter NsStatusItem\ Visible\ Clock -bool true
+# display time with seconds
+
+# Show Spotlight in Menu Bar
+defaults write com.apple.Spotlight NsStatusItem\ Visible\ Item-0 -bool false
+
+# Show Siri in Menu Bar
+defaults write com.apple.Siri StatusMenuVisible -bool false
+
+# Show Time Machine in Menu Bar
+# defaults write com.apple.systemuiserver NsStatusItem\ Visible\ Item-0 -bool false
+# defaults write com.apple.systemuiserver NsStatusItem\ Visible\ com.apple.menuextra.TimeMachine -bool true
+# defaults write com.apple.systemuiserver menuExtras -array-add "/System/Library/CoreServices/Menu Extras/TimeMachine.menu"

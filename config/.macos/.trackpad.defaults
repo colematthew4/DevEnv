@@ -1,0 +1,8 @@
+#!/bin/zsh
+
+# Tap to click
+defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
+defaults write com.apple.AppleMultitouchTrackpad.trackpad Clicking -bool true
+
+# app expose
+defaults write com.apple.dock showAppExposeGestureEnabled -bool true

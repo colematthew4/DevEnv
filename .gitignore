@@ -2,8 +2,33 @@
 # Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,macos
 # Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,macos
 
-Repos/*
+### DevEnv ###
+# everything. Anything included must be done so explicitly underneath
+*
 !Repos/DevEnv
+
+# Any dot files or directories. Anything included must be done so explicitly underneath
+.*
+!.androidstudio
+!.gitconfig
+!.gitignore
+!.gitkraken/config.json
+!.gitkraken/config
+!.gitkraken/profiles.json
+!.gitkraken/profiles/**/profile
+!.hooks
+!.idea
+!.macos
+!.pycharm
+!.toolbox
+!.vscode
+!.nvmrc
+!.zsh_aliases
+!.zshrc
+!.zshrc.*
+!install.zsh
+!LICENSE*
+!README*
 
 ### macOS ###
 # General

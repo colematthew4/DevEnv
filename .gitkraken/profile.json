@@ -1,0 +1,42 @@
+{
+  "tabInfo": {},
+  "externalEditor": "Visual Studio Code",
+  "profileIcon": "Keif.png",
+  "profileName": "Default Profile",
+  "userEmail": "colematthew4@gmail.com",
+  "userName": "Matthew Cole",
+  "gpg": {
+    "gpgProgram": null,
+    "userSigningKey": null,
+    "commitGpgSign": false,
+    "tagForceSignAnnotated": false
+  },
+  "editor": {
+    "fontFamily": "JetBrains Mono",
+    "wordWrap": true,
+    "lineEnding": "CRLF"
+  },
+  "defaultTerminal": "iTerm2",
+  "projectGroupNamesByDirectory": {
+    "/Users/matthew.cole/Repos": "Repos"
+  },
+  "fileNodeList": {
+    "viewMode": "tree_view"
+  },
+  "fileView": {
+    "diffDisplayMode": "split"
+  },
+  "repoInit": {
+    "lastRepoInitPath": "/Users/matthew.cole/Repos"
+  },
+  "init": {
+    "defaultBranch": "main"
+  },
+  "ui": {
+    "useAuthorInitialsForAvatars": true,
+    "graphOptions": {
+      "showCommitShaInGraph": true
+    }
+  },
+  "organizationId": null
+}

@@ -91,6 +91,6 @@ defaults write com.apple.Siri StatusMenuVisible -bool false
 # defaults write com.apple.systemuiserver menuExtras -array-add "/System/Library/CoreServices/Menu Extras/TimeMachine.menu"
 
 defaults delete com.apple.dock persistent-apps
-osascript dock.persistent-apps
-
 killall Dock
+
+osascript dock.persistent-apps

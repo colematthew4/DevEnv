@@ -1,0 +1,3 @@
+#!/bin/zsh
+
+tug completion zsh > /usr/local/etc/bash_completion.d/tug

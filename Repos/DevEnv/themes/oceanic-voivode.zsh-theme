@@ -1,6 +1,6 @@
 # -----------------------------------------------------------------------------
 # 
-# Dracula Prime Terminal Theme
+# Oceanic Voivode Terminal Theme
 # 
 # Author: Matthew Cole
 # 
@@ -78,11 +78,11 @@ precmd() {
             # the 255,85,85 is the truecolor red
 	        printf "\x1b[38;2;255;85;85m}\x1b[0m\n"
         else
-	    # the 0;31 is the standard red
+	        # the 0;31 is the standard red
             printf "\033[0;31m}\033[0m\n"
 	    fi
     fi
-    printf " \033[0;34m**********\033[0m\n"
+    printf " \033[0;34m/**********/\033[0m\n"
 }
 
 # timer
@@ -111,7 +111,7 @@ function command_status_color() {
     fi
 }
 
-function set_prompt {
+function set_prompt() {
     echo -n "$(colorize_fg %n PINK)"
     echo -n ' '
     echo -n "$(colorize_fg '<' $(command_status_color))"

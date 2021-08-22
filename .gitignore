@@ -2,6 +2,9 @@
 # Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,macos
 # Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,macos
 
+Repos/*
+!Repos/DevEnv
+
 ### macOS ###
 # General
 .DS_Store
@@ -32,12 +35,12 @@ Temporary Items
 .apdisk
 
 ### VisualStudioCode ###
-.vscode/*
-.vscode/settings.json
-.vscode/tasks.json
-.vscode/launch.json
-.vscode/extensions.json
-*.code-workspace
+# .vscode/*
+# .vscode/settings.json
+# .vscode/tasks.json
+# .vscode/launch.json
+# .vscode/extensions.json
+# *.code-workspace
 
 # Local History for Visual Studio Code
 .history/

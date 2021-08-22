@@ -83,5 +83,6 @@
   "eslint.format.enable": true,
   "eslint.lintTask.enable": true,
   "git.autoStash": true,
+  "redhat.telemetry.enabled": false,
   "xml.codeLens.enabled": true,
 }

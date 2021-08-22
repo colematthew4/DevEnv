@@ -59,6 +59,7 @@
   "editor.parameterHints.cycle": true,
   "editor.rulers": [120],
   "editor.suggest.preview": true,
+  "editor.tabSize": 2,
   "editor.wrappingIndent": "deepIndent",
   "editor.wordWrap": "bounded",
   "editor.wordWrapColumn": 120,
@@ -85,4 +86,7 @@
   "git.autoStash": true,
   "redhat.telemetry.enabled": false,
   "xml.codeLens.enabled": true,
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml"
+  }
 }

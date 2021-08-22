@@ -89,3 +89,5 @@ defaults write com.apple.Siri StatusMenuVisible -bool false
 # defaults write com.apple.systemuiserver NsStatusItem\ Visible\ Item-0 -bool false
 # defaults write com.apple.systemuiserver NsStatusItem\ Visible\ com.apple.menuextra.TimeMachine -bool true
 # defaults write com.apple.systemuiserver menuExtras -array-add "/System/Library/CoreServices/Menu Extras/TimeMachine.menu"
+
+killall Dock

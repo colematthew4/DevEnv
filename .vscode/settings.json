@@ -1,7 +1,87 @@
 {
-  "conventionalCommits.scopes": [
-    "oh-my-zsh",
-    "github-actions",
-    "defaults"
-  ]
+  "better-comments.tags": [
+    {
+      "tag": "!",
+      "color": "#FF2D00",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "?",
+      "color": "#3498DB",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "~",
+      "color": "#474747",
+      "strikethrough": true,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "todo",
+      "color": "#FF8C00",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "*",
+      "color": "#98C379",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    }
+  ],
+  "debug.inlineValues": true,
+  "debug.showBreakpointsInOverviewRuler": true,
+  "editor.foldingImportsByDefault": true,
+  "editor.fontFamily": "JetBrains Mono, Segoe UI, Menlo, Monaco",
+  "editor.fontLigatures": true,
+  "editor.formatOnPaste": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.linkedEditing": true,
+  "editor.minimap.enabled": false,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.parameterHints.cycle": true,
+  "editor.rulers": [120],
+  "editor.suggest.preview": true,
+  "editor.wrappingIndent": "deepIndent",
+  "editor.wordWrap": "bounded",
+  "editor.wordWrapColumn": 120,
+  "extensions.ignoreRecommendations": true,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "search.showLineNumbers": true,
+  "terminal.external.osxExec": "iTerm.app",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "line",
+  "telemetry.enableTelemetry": false,
+  "window.closeWhenEmpty": true,
+  "workbench.commandPalette.history": 100,
+  "workbench.colorTheme": "oceanic-voivode",
+  "workbench.preferredDarkColorTheme": "oceanic-voivode",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.view.alwaysShowHeaderActions": true,
+
+  // extensions
+  "eslint.alwaysShowStatus": true,
+  "eslint.format.enable": true,
+  "eslint.lintTask.enable": true,
+  "git.autoStash": true,
+  "xml.codeLens.enabled": true,
 }

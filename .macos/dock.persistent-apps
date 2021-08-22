@@ -1,0 +1,37 @@
+#!/usr/bin/osascript
+
+on DockApplication(_app)
+  activate application _app
+  delay 2.5
+  tell application "System Events"
+    tell process "Dock"
+      set frontmost to true
+      activate
+      tell list 1
+        perform action "AXShowMenu" of UI element _app
+        delay 0.5
+        repeat 4 times -- count number of items to the one you want
+          key code 126 -- up arrow
+        end repeat
+        delay 0.5
+        repeat 2 times
+          key code 36 -- return key
+        end repeat
+      end tell
+    end tell
+  end tell
+
+  delay 1
+  tell application _app to quit
+end DockApplication
+
+DockApplication("App Store")
+DockApplication("Activity Monitor")
+DockApplication("Mail")
+DockApplication("Calculator")
+DockApplication("Slack")
+DockApplication("Discord Canary")
+DockApplication("Vivaldi")
+DockApplication("iTerm")
+DockApplication("Visual Studio Code")
+DockApplication("GitKraken")

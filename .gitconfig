@@ -1,0 +1,9 @@
+[user]
+	email = colematthew4@gmail.com
+	name = Matthew Cole
+[core]
+	hooksPath = /Users/matthew.cole/.hooks
+[commit]
+	template = /Users/matthew.cole/.hooks/conventional-commit-template.txt
+[init]
+	defaultBranch = "main"

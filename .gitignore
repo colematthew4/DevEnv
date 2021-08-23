@@ -2,6 +2,35 @@
 # Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,macos
 # Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,macos
 
+### DevEnv ###
+# Ignore Everything. Anything included must be done so explicitly underneath
+*
+.*
+!.devenv
+!.devenv/**
+!.androidstudio
+!.gitconfig
+!.gitignore
+!.github
+!.gitkraken/config.json
+!.gitkraken/config
+!.gitkraken/profiles.json
+!.gitkraken/profiles/**/profile
+!.hooks
+!.idea
+!.macos
+!.pycharm
+!.slack
+!.toolbox
+!.vscode
+!.nvmrc
+!.zsh_aliases
+!.zshrc
+!.zshrc.*
+!install.zsh
+!LICENSE*
+!README*
+
 ### macOS ###
 # General
 .DS_Store
@@ -32,12 +61,12 @@ Temporary Items
 .apdisk
 
 ### VisualStudioCode ###
-.vscode/*
-.vscode/settings.json
-.vscode/tasks.json
-.vscode/launch.json
-.vscode/extensions.json
-*.code-workspace
+# .vscode/*
+# .vscode/settings.json
+# .vscode/tasks.json
+# .vscode/launch.json
+# .vscode/extensions.json
+# *.code-workspace
 
 # Local History for Visual Studio Code
 .history/

@@ -1,0 +1,26 @@
+{
+  "Notifications": {
+    "notify": "direct",
+    "notify-threads": true,
+    "diff-mobile": false,
+    "bounce": false,
+    "email-notifs-offline": false
+  },
+  "sidebar": {
+    "show": [
+      "connect",
+      "channel-browser"
+    ],
+    "sort": "alphabetical"
+  },
+  "theme": {
+    "appearance": "dark",
+    "colors": "#263238,#2e3a40,#546e7a,#ffffff,#13191c,#B0BEC5,#50fa7b,#ff5555,#2E3C43,#B0BEC5"
+  },
+  "messages": {
+    "theme": "clean",
+    "names": "display",
+    "inline-images-from-web": true,
+    "inline-images-from-web-over-2mb": false
+  }
+}

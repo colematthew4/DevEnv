@@ -1,0 +1,17 @@
+{
+    "Theme": "Dark",
+    "Launch Toolbox App at System Startup": true,
+    "Update Toolbox App automatically": true,
+    "Send anonymous usage statistics to JetBrains": false,
+    "Update all tools automatically": false,
+    "Keep only the latest version": true,
+    "Reload Dock after update": true,
+    "Generate shell scripts": true,
+    "Shell scripts location": "/usr/local/bin",
+    "Proxy": "Disabled",
+    "Tools": [
+        "Android Studio",
+        "IntelliJ IDEA Community Edition",
+        "PyCharm Community"
+    ]
+}

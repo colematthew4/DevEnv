@@ -1,0 +1,6 @@
+#!/bin/zsh
+
+# ensure is installed and in path
+which xed || exit 1
+
+cp $HOME/Repos/DevEnv/themes/Oceanic\ Voivode.xccolortheme $HOME/Library/Developer/Xcode/UserData/FontAndColorThemes/

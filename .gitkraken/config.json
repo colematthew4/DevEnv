@@ -1,0 +1,52 @@
+{
+  "registration": {
+    "email": "colematthew4@gmail.com",
+    "name": "Matthew Cole",
+    "status": "activated",
+    "loginType": "github",
+    "date": "2021-07-07T04:13:02.044Z",
+    "EULA": {
+      "version": "7.5.0",
+      "status": "agree_verified"
+    }
+  },
+  "userId": "20fab640-e56b-4c8c-b3b2-fbb01a5fcc72",
+  "licensedFeatures": [],
+  "userFeatures": [
+    {
+      "name": "gitkraken"
+    },
+    {
+      "name": "glo"
+    },
+    {
+      "name": "timelines"
+    }
+  ],
+  "hasSeenNewUserOnboarding": true,
+  "windowSettings": {
+    "x": 0,
+    "y": 25,
+    "width": 1792,
+    "height": 1055,
+    "fullScreen": false,
+    "maximized": true
+  },
+  "commits": {
+    "maxCommitsInGraph": 2000
+  },
+  "fuzzyFinderMetadata": {
+    "itemMetadata": {
+      "OPEN_REPO": {}
+    }
+  },
+  "notification": {
+    "settings": {
+      "local": {
+        "showDesktopNotifications": true
+      }
+    },
+    "toastrLocationClassname": "toast-bottom-left"
+  },
+  "sslWhitelist": []
+}

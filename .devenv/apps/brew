@@ -6,6 +6,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/inst
 # turbogit optional, recommended if gitkraken can't be used
 brew install \
   gradle \
+  graphviz \
   jenv \
   jq \
   nvm \

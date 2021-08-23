@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-git remote add https://github.com/colematthew4/dotfiles.git
+git remote add origin https://github.com/colematthew4/dotfiles.git
 git checkout origin/main
 
 # First order of business: configure repo directory if not already set

@@ -1,16 +1,16 @@
-name: Test Installation
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    types:
-      - opened
-      - reopened
-jobs:
-  install-apps:
-    runs-on: macos-10.15
-    steps:
-      - uses: actions/checkout@v2
-      - run: REPOS_DIR=$PWD ./install.zsh
-      - run: cat $HOME/.zshrc
+# name: Test Installation
+# on:
+#   push:
+#     branches:
+#       - main
+#   pull_request:
+#     types:
+#       - opened
+#       - reopened
+# jobs:
+#   install-apps:
+#     runs-on: macos-10.15
+#     steps:
+#       - uses: actions/checkout@v2
+#       - run: REPOS_DIR=$PWD ./install.zsh
+#       - run: cat $HOME/.zshrc

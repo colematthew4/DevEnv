@@ -1,5 +1,12 @@
 name: Test Installation
-on: [push]
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types:
+      - opened
+      - reopened
 jobs:
   install-apps:
     runs-on: macos-10.15

@@ -1,7 +1,0 @@
-{
-  "conventionalCommits.scopes": [
-    "oh-my-zsh",
-    "github-actions",
-    "defaults"
-  ]
-}

@@ -13,7 +13,7 @@ fi
 
 # Add theme
 rm $HOME/.oh-my-zsh/custom/themes/example*
-cp $REPOS_DIR/themes/oceanic-voivode.zsh-theme $HOME/.oh-my-zsh/custom/themes
+ln -s ~/.devenv/themes/oceanic-voivode.zsh-theme ~/.oh-my-zsh/custom/themes/oceanic-voivode.zsh-theme
 
 # Disable auto-update prompt to just always update
 perl -i -pe's/^# (DISABLE_UPDATE_PROMPT=")[a-zA-Z]*("?$)/$1true$2/g' $HOME/.zshrc

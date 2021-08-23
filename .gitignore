@@ -3,12 +3,11 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,macos
 
 ### DevEnv ###
-# everything. Anything included must be done so explicitly underneath
+# Ignore Everything. Anything included must be done so explicitly underneath
 *
-!Repos/DevEnv
-
-# Any dot files or directories. Anything included must be done so explicitly underneath
 .*
+!.devenv
+!.devenv/**
 !.androidstudio
 !.gitconfig
 !.gitignore

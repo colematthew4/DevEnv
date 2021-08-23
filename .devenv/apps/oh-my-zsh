@@ -9,34 +9,9 @@ if [ -z "$CI" ]; then
   chsh -s $(which zsh)
 fi
 
-. $REPOS_DIR/tools/copyConfigsToHome
-
 # Add theme
 rm $HOME/.oh-my-zsh/custom/themes/example*
 ln -s ~/.devenv/themes/oceanic-voivode.zsh-theme ~/.oh-my-zsh/custom/themes/oceanic-voivode.zsh-theme
-
-# Disable auto-update prompt to just always update
-perl -i -pe's/^# (DISABLE_UPDATE_PROMPT=")[a-zA-Z]*("?$)/$1true$2/g' $HOME/.zshrc
-
-# Add aliases
-copyConfigsToHome .zsh_aliases
-
-# Write theme to zshrc
-# sed -i -Ee 's/(^ZSH_THEME=("?))[a-zA-Z0-9_ -]*("?$)/\1oceanic-voivode\2/g' $HOME/.zshrc
-perl -i -pe's/(^ZSH_THEME=("?))[a-zA-Z0-9_ -]*("?$)/$1oceanic-voivode$2/g' $HOME/.zshrc
-
-# Write plugins to zshrc
-. $REPOS_DIR/tools/loadZshPlugins && loadPlugins
-echo
-
-# Escape the newlines in ZSH_PLUGINS so perl can insert it in-place
-escaped_plugins=$(sed 's:/:\\/:g' <<< $ZSH_PLUGINS)
-perl -i -p0777e"s/(^plugins=\()[\w\s\/#:.-]*(\)$)/\1\n$escaped_plugins\n\2/gm" $HOME/.zshrc
-# perl -i -p0777e's/(^plugins=\()[\w\s\/#:.-]*(\)$)/\1git\2/gm' $HOME/.zshrc
-
-# Ensure extended configurations are loaded
-copyConfigsToHome .zshrc.ext
-echo '. ~./zshrc.ext' >> $HOME/.zshrc
 
 # Reload the new .zshrc so that some comands can be properly run and more executables are added to path
 zsh

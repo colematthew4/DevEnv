@@ -4,12 +4,12 @@
 which code || exit 1
 
 rm $HOME/Library/Application\ Support/Code/User/settings.json
-ln -s $HOME/.vscode/settings.json $HOME/Library/Application\ Support/Code/User/settings.json
+ln -s $HOME/.devenv/.vscode/settings.json $HOME/Library/Application\ Support/Code/User/settings.json
 
 while read -r ext; do
-    code --install-extension $ext
+  code --install-extension $ext
 done < $HOME/.vscode/extensions.txt
 
 while read -r ext; do
-    code --disable-extension $ext
+  code --disable-extension $ext
 done < $HOME/.vscode/disabled-extensions.txt

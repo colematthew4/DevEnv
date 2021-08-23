@@ -74,8 +74,10 @@
     ".devenv": "Environment",
     ".jenv": "Environment",
     ".hooks": "Hook",
+    ".npm": "node",
+    ".nvm": "node",
     "Desktop": "Client",
-    "Repos": "Project",
+    "Repos": "Project"
   },
   "search.showLineNumbers": true,
   "terminal.external.osxExec": "iTerm.app",

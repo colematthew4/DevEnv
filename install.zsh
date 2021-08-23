@@ -1,7 +1,9 @@
 #!/bin/zsh
 
+git init
 git remote add origin https://github.com/colematthew4/dotfiles.git
 git checkout origin/main
+git pull
 
 # First order of business: configure repo directory if not already set
 if [ -z "$REPOS_DIR" ]; then

@@ -11,6 +11,7 @@
 !.androidstudio
 !.gitconfig
 !.gitignore
+!.github
 !.gitkraken/config.json
 !.gitkraken/config
 !.gitkraken/profiles.json
@@ -19,6 +20,7 @@
 !.idea
 !.macos
 !.pycharm
+!.slack
 !.toolbox
 !.vscode
 !.nvmrc

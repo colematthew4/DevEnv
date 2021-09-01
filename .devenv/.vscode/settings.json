@@ -61,6 +61,7 @@
     120
   ],
   "editor.suggest.preview": true,
+  "editor.suggestSelection": "first",
   "editor.tabSize": 2,
   "editor.wrappingIndent": "deepIndent",
   "editor.wordWrap": "bounded",
@@ -90,16 +91,23 @@
   "workbench.preferredDarkColorTheme": "oceanic-voivode",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.view.alwaysShowHeaderActions": true,
+
   // extensions
   "eslint.alwaysShowStatus": true,
   "eslint.format.enable": true,
   "eslint.lintTask.enable": true,
   "git.autoStash": true,
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"/Users/matthew.cole/.vscode/extensions/gabrielbb.vscode-lombok-1.0.1/server/lombok.jar\"",
   "redhat.telemetry.enabled": false,
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "xml.codeLens.enabled": true,
   "[xml]": {
     "editor.defaultFormatter": "redhat.vscode-xml"
-  },
-  "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
+  }
 }

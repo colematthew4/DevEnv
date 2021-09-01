@@ -25,6 +25,7 @@
 !.vscode
 !.nvmrc
 !.zsh_aliases
+!.zshenv
 !.zshrc
 !.zshrc.*
 !install.zsh

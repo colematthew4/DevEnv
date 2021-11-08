@@ -80,7 +80,6 @@ plugins=(
   node                     # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/node
   nvm                      # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/nvm
   osx                      # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/osx
-  zsh_reload               # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/zsh_reload
   zsh-syntax-highlighting  # https://github.com/mattjj/my-oh-my-zsh/tree/master/plugins/zsh-syntax-highlighting
 )
 

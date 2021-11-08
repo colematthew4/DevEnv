@@ -3,5 +3,15 @@
     "oh-my-zsh",
     "github-actions",
     "defaults"
-  ]
+  ],
+  "material-icon-theme.folders.associations": {
+    ".config": "Config",
+    ".devenv": "Environment",
+    ".jenv": "Environment",
+    ".hooks": "Hook",
+    ".npm": "node",
+    ".nvm": "node",
+    "Desktop": "Client",
+    "Repos": "Project"
+  },
 }

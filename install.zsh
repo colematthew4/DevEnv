@@ -2,7 +2,7 @@
 
 git init -b main
 git remote add origin https://github.com/colematthew4/dotfiles.git
-git pull origin
+git pull origin main
 
 # First order of business: configure repo directory if not already set
 if [ -z "$REPOS_DIR" ]; then
@@ -25,6 +25,6 @@ if [ -z "$CI" ]; then
 fi
 
 # Invoke scripts to set system preferences and other actions that can't be done by zsh
-while read -r setting; do
-  exec $setting
-done < $(find .macos -regex '.*\.defaults')
+for setting in $HOME/.macos/*.defaults; do
+  . $setting
+done

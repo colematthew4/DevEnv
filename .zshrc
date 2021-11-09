@@ -79,7 +79,7 @@ plugins=(
   # kubectl                  # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/kubectl
   node                     # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/node
   nvm                      # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/nvm
-  osx                      # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/osx
+  macos                    # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/macos
   zsh-syntax-highlighting  # https://github.com/mattjj/my-oh-my-zsh/tree/master/plugins/zsh-syntax-highlighting
 )
 

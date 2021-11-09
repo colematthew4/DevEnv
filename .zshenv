@@ -25,4 +25,4 @@ export NVM_LAZY=1
 #####################################################################
 #                             turbogit
 #####################################################################
-tug completion zsh > /usr/local/etc/bash_completion.d/tug
+# tug completion zsh > /usr/local/etc/bash_completion.d/tug

@@ -9,6 +9,10 @@ if [ -z "$CI" ]; then
   chsh -s $(which zsh)
 fi
 
+# Add zsh-syntax-highlighting plugin
+rm -rf $HOME/.oh-my-zsh/custom/plugins/example*
+git clone git://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+
 # Add theme
 rm $HOME/.oh-my-zsh/custom/themes/example*
 ln -s ~/.devenv/themes/oceanic-voivode.zsh-theme ~/.oh-my-zsh/custom/themes/oceanic-voivode.zsh-theme

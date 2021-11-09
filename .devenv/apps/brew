@@ -1,15 +1,17 @@
 #!bin/zsh
 
 echo "Installing Homebrew"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # turbogit optional, recommended if gitkraken can't be used
+brew tap b4nst/homebrew-tap
 brew install \
   gradle \
   graphviz \
   jenv \
   jq \
   nvm \
+  yarn \
   turbogit
 
 # don't install casks on github runner

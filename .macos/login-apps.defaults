@@ -6,4 +6,5 @@ tell application "System Events"
     make login item at end with properties { path: "/Applications/Rectangle.app", hidden: true }
     make login item at end with properties { path: "/Applications/Mail.app", hidden: true }
     make login item at end with properties { path: "/Applications/Slack.app", hidden: true }
+    make login item at end with properties { path: "/Applications/Fig.app", hidden: true }
 end tell

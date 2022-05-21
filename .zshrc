@@ -1,3 +1,6 @@
+# Fig pre block. Keep at the top of this file.
+. "$HOME/.fig/shell/zshrc.pre.zsh"
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -73,6 +76,7 @@ DISABLE_UPDATE_PROMPT="true"
 plugins=(
   # aws                      # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/aws
   docker                   # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/docker
+  fig                      # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/fig
   # git                      # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git
   gitignore                # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/gitignore
   jenv                     # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/jenv
@@ -110,3 +114,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Fig post block. Keep at the bottom of this file.
+. "$HOME/.fig/shell/zshrc.post.zsh"

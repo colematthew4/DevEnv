@@ -19,6 +19,7 @@ if [ -z "$CI" ]; then
   # gitkraken optional because of license
   brew install --cask \
     adoptopenjdk \
+    fig \
     gitkraken \
     jetbrains-toolbox \
     rectangle \

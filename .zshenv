@@ -23,6 +23,6 @@ export NVM_LAZY=1
 # export NVM_AUTOLOAD=1
 
 #####################################################################
-#                             turbogit
+#                            cargo/rust
 #####################################################################
-# tug completion zsh > /usr/local/etc/bash_completion.d/tug
+. "$HOME/.cargo/env"

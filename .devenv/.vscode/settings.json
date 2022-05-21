@@ -46,7 +46,7 @@
       "italic": false
     }
   ],
-  "debug.inlineValues": true,
+  "debug.inlineValues": "on",
   "debug.showBreakpointsInOverviewRuler": true,
   "editor.bracketPairColorization.enabled": true,
   "editor.foldingImportsByDefault": true,
@@ -145,4 +145,7 @@
     "!Split",
     "!Split sequence"
   ],
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
 }

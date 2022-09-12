@@ -20,7 +20,7 @@ export NVM_LAZY=1
 # If autoload is set to 1, the plugin will automatically load a node
 # version when it finds a `.nvmrc` file in the current working directory
 # indicating which node version to load.
-# export NVM_AUTOLOAD=1
+export NVM_AUTOLOAD=1
 
 #####################################################################
 #                            cargo/rust

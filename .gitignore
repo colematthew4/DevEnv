@@ -24,6 +24,8 @@
 !.toolbox
 !.vscode
 !.nvmrc
+!.warp
+!.warp/**
 !.zsh_aliases
 !.zshenv
 !.zshrc

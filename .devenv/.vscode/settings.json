@@ -48,6 +48,8 @@
   ],
   "debug.inlineValues": "on",
   "debug.showBreakpointsInOverviewRuler": true,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.accessibilitySupport": "off",
   "editor.bracketPairColorization.enabled": true,
   "editor.foldingImportsByDefault": true,
   "editor.fontFamily": "JetBrains Mono, Segoe UI, Menlo, Monaco",
@@ -73,8 +75,10 @@
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
+  "scm.defaultViewMode": "tree",
   "search.showLineNumbers": true,
-  "terminal.external.osxExec": "iTerm.app",
+  "terminal.explorerKind": "external",
+  "terminal.external.osxExec": "Warp.app",
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.cursorStyle": "line",
   "telemetry.telemetryLevel": "error",
@@ -91,6 +95,12 @@
   "eslint.alwaysShowStatus": true,
   "eslint.format.enable": true,
   "eslint.lintTask.enable": true,
+  "jest.autoRun": "off",
+  "jest.nodeEnv": {
+    "TZ": "UTC",
+    "NODE_ENV": "test",
+    "QUICK_RUN": true,
+  },
   "git.autoStash": true,
   "files.exclude": {
     "**/.classpath": true,
@@ -98,16 +108,27 @@
     "**/.settings": true,
     "**/.factorypath": true
   },
+  "files.watcherExclude": {
+    "**/build/**": true
+  },
   "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"/Users/matthew.cole/.vscode/extensions/gabrielbb.vscode-lombok-1.0.1/server/lombok.jar\"",
+  "javascript.updateImportsOnFileMove.enabled": "always",
   "json.schemas": [],
   "material-icon-theme.folders.associations": {
     "desktop": "Client"
   },
+  "npm.keybindingsChangedWarningShown": true,
   "redhat.telemetry.enabled": false,
   "[rust]": {
     "editor.language.colorizedBracketPairs": [
-      ["{", "}"],
-      ["(", ")"]
+      [
+        "{",
+        "}"
+      ],
+      [
+        "(",
+        ")"
+      ]
     ]
   },
   "typescript.updateImportsOnFileMove.enabled": "always",

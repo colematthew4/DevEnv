@@ -104,9 +104,10 @@
   "git.autoStash": true,
   "files.exclude": {
     "**/.classpath": true,
+    "**/.factorypath": true,
     "**/.project": true,
     "**/.settings": true,
-    "**/.factorypath": true
+    "node_modules": true
   },
   "files.watcherExclude": {
     "**/build/**": true

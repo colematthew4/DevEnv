@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-nvm install 12
+nvm install 16
 # nvm install-latest-npm
 
 yarn global add commitlint @commitlint/config-conventional typescript

@@ -12,14 +12,14 @@ brew install \
   jq \
   nvm \
   yarn \
-  turbogit
+  rustup
 
 # don't install casks on github runner
 if [ -z "$CI" ]; then
   # gitkraken optional because of license
   brew install --cask \
     adoptopenjdk \
-    fig \
+    cheatsheet \
     gitkraken \
     jetbrains-toolbox \
     rectangle \

@@ -116,9 +116,12 @@
   "javascript.updateImportsOnFileMove.enabled": "always",
   "json.schemas": [],
   "material-icon-theme.folders.associations": {
-    "desktop": "Client"
+    "desktop": "Client",
+    "crates": "Lib"
   },
   "npm.keybindingsChangedWarningShown": true,
+  "nxConsole.enableTelemetry": false,
+  "nxConsole.useNVM": true,
   "redhat.telemetry.enabled": false,
   "[rust]": {
     "editor.language.colorizedBracketPairs": [
@@ -166,8 +169,5 @@
     "!Select sequence",
     "!Split",
     "!Split sequence"
-  ],
-  "terminal.integrated.env.osx": {
-    "FIG_NEW_SESSION": "1"
-  },
+  ]
 }

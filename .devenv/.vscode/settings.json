@@ -66,6 +66,7 @@
     120
   ],
   "editor.suggest.preview": true,
+  "editor.suggest.selectionMode": "whenQuickSuggestion",
   "editor.suggestSelection": "first",
   "editor.tabSize": 2,
   "editor.wrappingIndent": "deepIndent",
@@ -133,7 +134,8 @@
         "(",
         ")"
       ]
-    ]
+    ],
+    "editor.defaultFormatter": "jinxdash.prettier-rust"
   },
   "typescript.updateImportsOnFileMove.enabled": "always",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",

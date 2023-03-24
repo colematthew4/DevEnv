@@ -12,7 +12,9 @@ brew install \
   jq \
   nvm \
   yarn \
-  rustup
+  rustup \
+  bat \
+  eth-p/software/bat-extras-batgrep
 
 # don't install casks on github runner
 if [ -z "$CI" ]; then

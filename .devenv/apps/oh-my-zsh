@@ -17,5 +17,5 @@ git clone git://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.oh-my-zs
 rm $HOME/.oh-my-zsh/custom/themes/example*
 ln -s ~/.devenv/themes/oceanic-voivode.zsh-theme ~/.oh-my-zsh/custom/themes/oceanic-voivode.zsh-theme
 
-# Reload the new .zshrc so that some comands can be properly run and more executables are added to path
+# Reload the new .zshrc so that some commands can be properly run and more executables are added to path
 zsh

@@ -9,6 +9,7 @@
 !.commitlintrc.js
 !.devenv
 !.devenv/**
+.devenv/**/*.code-profile
 !.androidstudio
 !.gitconfig
 !.gitignore
